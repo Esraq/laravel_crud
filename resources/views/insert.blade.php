@@ -13,7 +13,7 @@
 
 <body>
 	<form class="cmxform" id="signupForm" method="POST" action="/crud" autocomplete="off">
-        @csrf
+       @csrf
 		<fieldset>
 			<legend>GFG sign-up Form</legend>
 			

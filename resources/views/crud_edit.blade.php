@@ -12,8 +12,9 @@
 </head>
 
 <body>
-{!! Form::open(['url' => URL::to('/crud/'.$crud->id), 'method'=>"put",  'id'=>'myform', 'enctype'=>'multipart/form-data']) !!}
-                                @csrf
+<form action="{{ route('crud.update',$crud->id) }}" method="POST">
+        @csrf
+        @method('PUT')
         
 		<fieldset>
 			<legend>GFG sign-up Form</legend>

@@ -40,9 +40,15 @@
         <td><center>{{$cruds->firstname}}</center></td>
         <td><center>{{$cruds->lastname}}</center></td>
         <td><center>{{$cruds->username}}</center></td>
-        <td>{!! Form::open(['url' => URL::to('/crud/'.$cruds->id),"method"=>"DELETE"]) !!}
-<button type="submit" class="btn btn-danger mb-1">Delete</button>
-    {!! Form::close() !!}</td>
+        <td><form action="{{ route('crud.destroy',$cruds->id) }}" method="POST">
+   
+                   
+   
+   @csrf
+   @method('DELETE')
+
+   <button type="submit" class="btn btn-danger">Delete</button>
+</form></td>
 
     <td><a href="{{ URL::to('/crud/'.$cruds->id.'/edit') }}" class="btn btn-primary mb-1">Edit</a></td>
 
