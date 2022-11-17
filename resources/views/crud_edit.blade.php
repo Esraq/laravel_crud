@@ -55,7 +55,7 @@
 
 			
 <p>
-				<input class="submit" type="submit" value="submit">
+				<input class="submit" type="submit" value="update">
 			</p>
 
 		</fieldset>
